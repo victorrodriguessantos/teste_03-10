@@ -1,0 +1,13 @@
+ public function index()
+    {
+        //"chamou" a model
+        //$contatos = Contato::all();        
+        //$contatos = Contato::where('idContato',3)->get();
+        //$contatos = Contato::where('idContato','>=',3)->get();
+        //$contatos = Contato::where('emailContato','=','amaria@gmail.com')->get();
+        //$contatos = Contato::where('idContato','>',0)->orderBy('emailContato','desc')->get();
+        $contatos = Contato::where('idContato','>',0)->orderBy('emailContato','asc')->get();
+
+        //nome da view      //atributo $contatos sem $
+        return view('contato',compact('contatos')); 
+    }
